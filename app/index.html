@@ -25,6 +25,7 @@
   <div class="header">
     <div class="navbar navbar-default" role="navigation">
       <div class="container">
+        <div ui-view></div>
         <div class="navbar-header">
 
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
@@ -40,7 +41,11 @@
         <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#/">Home</a></li>
+            <li class="active" id="homeLink"><a href="#/">Home</a></li>
+            <li id="redBrickLink"><a ui-sref="redBrick" >Red Bricks</a></li>
+            <li id="blueBrickLink"><a ui-sref="blueBrick">Blue Bricks</a></li>
+            <li id="greenBrickLink"><a ui-sref="greenBrick">Green Bricks</a></li>
+            <li id="cartLink"><a ui-sref="cart">cart</a></li>
           </ul>
         </div>
       </div>
@@ -56,6 +61,8 @@
     <div ng-include="'views/cart.html'" ng-controller="CartCtrl as cart"></div>
   </div>
 
+
+
   <div class="footer">
     <div class="container">
       <p><span class="glyphicon glyphicon-heart"></span> from Udacity</p>
@@ -67,6 +74,7 @@
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 
